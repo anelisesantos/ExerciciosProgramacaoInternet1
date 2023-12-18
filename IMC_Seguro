@@ -1,0 +1,13 @@
+def bmi(weight, height):
+    # Verifica se o peso e a altura são valores significativos
+    if weight <= 0 or weight > 500:
+        return None
+    if height <= 0 or height > 3:
+        return None
+
+    return weight / height ** 2
+
+# Teste da função
+print(bmi(52.5, 1.65))  # Deve retornar um valor normal, como no seu exemplo original
+print(bmi(-10, 1.65))   # Deve retornar None, pois o peso é inválido
+print(bmi(52.5, 0))     # Deve retornar None, pois a altura é inválida
